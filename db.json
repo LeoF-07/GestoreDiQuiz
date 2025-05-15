@@ -1,0 +1,20 @@
+{
+    "domande":[
+        {
+            "id": "P0",
+            "numeroDomanda": 0,
+            "testoDomanda": "Come ti chiami",
+            "risposta1": "Antonio",
+            "risposta2": "Leonardo",
+            "rispostaCorretta": "Leonardo"
+        },
+        {
+            "id": "P1",
+            "numeroDomanda": 1,
+            "testoDomanda": "Quanti anni hai",
+            "risposta1": "16",
+            "risposta2": "17",
+            "rispostaCorretta": 17
+        }
+    ]
+}

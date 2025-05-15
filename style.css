@@ -1,0 +1,20 @@
+.form{
+    border: 2px solid black;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2%;
+}
+
+#testoEFormDomanda{
+    border: 2px solid black;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#titolo{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
