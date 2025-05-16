@@ -1,0 +1,57 @@
+{
+    "domande":[
+        {
+            "id": "P0",
+            "testoDomanda": "Come ti chiami?",
+            "risposta1": "Antonio",
+            "risposta2": "Leonardo"
+        },
+        {
+            "id": "P1",
+            "testoDomanda": "Quanti anni hai?",
+            "risposta1": "16",
+            "risposta2": "17"
+        },
+        {
+            "id": "P2",
+            "testoDomanda": "Che animale hai?",
+            "risposta1": "Coniglio",
+            "risposta2": "Cane"
+        },
+        {
+            "id": "P3",
+            "testoDomanda": "Dove abiti?",
+            "risposta1": "Scorzè",
+            "risposta2": "Noale"
+        },
+        {
+            "id": "P4",
+            "testoDomanda": "Che scuola fai?",
+            "risposta1": "Informatica",
+            "risposta2": "Elettronica"
+        }
+    ],
+
+    "risposte":[
+        {
+            "id": "P0",
+            "rispostaCorretta":"Leonardo"
+        },
+        {
+            "id": "P1",
+            "rispostaCorretta": 17
+        },
+        {
+            "id": "P2",
+            "rispostaCorretta": "Coniglio"
+        },
+        {
+            "id": "P3",
+            "rispostaCorretta": "Scorzè"
+        },
+        {
+            "id": "P4",
+            "rispostaCorretta": "Informatica"
+        }
+    ]
+}

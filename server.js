@@ -4,7 +4,8 @@ const fs = require("fs");
 const { randomInt } = require('crypto');
 const PORT = 8000;
 
-let contenutoFile = [];
+let domande = [];
+let risposte = [];
 
 const server = http.createServer((req, res) => {
     console.log(req.url);
@@ -14,7 +15,7 @@ const server = http.createServer((req, res) => {
 
     if (req.method === 'GET') {
         if(parsedUrl.pathname === '/init'){
-            fs.readFile(__dirname + '/db.json', function (error, data) {
+            fs.readFile(__dirname + '/domande.json', function (error, data) {
                 if (error) {
                     res.writeHead(404);
                     res.write(error);
@@ -27,38 +28,14 @@ const server = http.createServer((req, res) => {
                         'Access-Control-Allow-Headers': 'Content-Type'
                     });
 
-                    contenutoFile = JSON.parse(data).domande;
-                    console.log(contenutoFile);
+                    domande = JSON.parse(data).domande;
+                    risposte = JSON.parse(data).risposte;
 
                     res.write(JSON.stringify(JSON.parse(data)));
                     res.end();
                 }
             });
         }
-        /*if (parsedUrl.pathname === '/chiediDomanda') {
-            fs.readFile(__dirname + '/db.json', function (error, data) {
-                if (error) {
-                    res.writeHead(404);
-                    res.write(error);
-                    res.end();
-                } else {
-                    res.writeHead(200, {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods': 'GET, POST, PUT',
-                        'Access-Control-Allow-Headers': 'Content-Type'
-                    });
-
-                    const categoria = parsedUrl.query.categoria;
-                    if(categoria == "ALL"){
-                        const domande = JSON.parse(data).domande;
-                        const n = randomInt(domande.length);
-                        res.write(JSON.stringify(domande[n]));
-                        res.end();
-                    }
-                }
-            });
-        }*/
 
         if (parsedUrl.pathname === '/chiediDomanda') {
             res.writeHead(200, {
@@ -70,47 +47,38 @@ const server = http.createServer((req, res) => {
     
             const categoria = parsedUrl.query.categoria;
             if(categoria == "ALL"){
-                const n = randomInt(contenutoFile.length);
-                res.write(JSON.stringify(contenutoFile[n]));
+                const n = randomInt(domande.length);
+                res.write(JSON.stringify(domande[n]));
                 res.end();
+                domande.splice(n, 1);
             } 
         }
 
         if (parsedUrl.pathname === '/chiediRisposta') {
-            fs.readFile(__dirname + '/db.json', function (error, data) {
-                if (error) {
-                    res.writeHead(404);
-                    res.write(error);
-                    res.end();
-                } else {
-                    res.writeHead(200, {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods': 'GET, POST, PUT',
-                        'Access-Control-Allow-Headers': 'Content-Type'
-                    });
+            res.writeHead(200, {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT',
+                'Access-Control-Allow-Headers': 'Content-Type'
+            });
 
-                    const id = parsedUrl.query.id;
-                    const risposta = parsedUrl.query.risposta;
+            const id = parsedUrl.query.id;
+            const risposta = parsedUrl.query.risposta;
 
-                    if (id != null && risposta != null) {
-                        const domande = JSON.parse(data).domande;
+            if (id != null && risposta != null) {
                         
-                        for(let i in domande){
-                            if(domande[i].id == id){
-                                console.log(domande[i].rispostaCorretta);
-                                console.log(risposta);
-                                if(domande[i].rispostaCorretta == risposta){
-                                    res.end(JSON.stringify({esito: "corretto"}));
-                                    return;
-                                }
-                                return;
-                            }
+                for(let i in risposte){
+                    if(risposte[i].id == id){
+                        if(risposte[i].rispostaCorretta == risposta){
+                            res.end(JSON.stringify({esito: "corretto"}));
+                            return;
                         }
                         res.end(JSON.stringify({esito: "sbagliato"}));
+                        return;
                     }
                 }
-            });
+            }
+                
         }
     } else
         if (req.method === 'POST') {
@@ -120,7 +88,7 @@ const server = http.createServer((req, res) => {
                     datiAgg += data
                 })
                 req.on('end', function () {
-                    fs.writeFile(__dirname + '/domandeDaPescare.json', datiAgg, (err) => {
+                    fs.writeFile(__dirname + '/domande.json', datiAgg, (err) => {
                         let riscritto = "";
                         if (err)
                             riscritto = "non riuscito";
