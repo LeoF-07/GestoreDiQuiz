@@ -1,6 +1,6 @@
 const url = "http://127.0.0.1:8000";
 
-let numeroDomande;
+let numeroDomandeTotali;
 let domanda;
 let punteggio = 0;
 
@@ -16,8 +16,18 @@ let formIniziale = `<form onsubmit="event.preventDefault()" id="formIniziale" cl
 
 let formDomanda =  `<div id="testoEFormDomanda">
                         <div id="testoDomanda">Domanda</div>
-                        <form onsubmit="event.preventDefault()" id="formDomanda" class="form"></form>
+                        <form onsubmit="event.preventDefault()" id="formDomanda" class="form">
+                            <div id="radioRisposte"></div>
+                        </form>
                     </div>`
+
+let fineQuiz = `<div id="fineQuiz">
+                    Hai completato il quiz!<br><br><br>
+                    Hai ottenuto il seguente punteggio<br><br>
+                    <div id="punteggio">5/5</div>
+                    <br>
+                    <div id="percentuale">100%</div>
+                </div>`
 
 async function onLoad_Setup(){
     document.getElementById("contenitoreForm").innerHTML = formIniziale;
@@ -34,6 +44,7 @@ async function onLoad_Setup(){
 
 function prelevaDatiForm(){
     let indiceSelezionato = formIniziale.numeroDomande.selectedIndex;
+    numeroDomandeTotali = Number.parseInt(formIniziale.numeroDomande.options[indiceSelezionato].value);
     let numeroDomande = Number.parseInt(formIniziale.numeroDomande.options[indiceSelezionato].value);
     if(isNaN(numeroDomande)) alert("Seleziona il numero di domande!");
     else chiediDomanda(numeroDomande);
@@ -43,7 +54,10 @@ async function chiediDomanda(numeroDomande){
     console.log(numeroDomande);
     if(numeroDomande == 0) {
         alert("Quiz terminato!");
-        document.body.innerHTML += punteggio;
+        document.getElementById("contenitoreDomanda").innerHTML = "";
+        document.getElementById('contenitorePunteggio').innerHTML = fineQuiz;
+        document.getElementById("punteggio").innerHTML = `${punteggio}/${numeroDomandeTotali}`;
+        document.getElementById("percentuale").innerHTML = `${(punteggio / numeroDomandeTotali) * 100}%`;
         return;
     }
 
@@ -54,25 +68,21 @@ async function chiediDomanda(numeroDomande){
 
         document.getElementById("contenitoreForm").innerHTML = "";
         document.getElementById("contenitoreDomanda").innerHTML = formDomanda;
-        let form = document.getElementById("formDomanda");
 
         document.getElementById("testoDomanda").innerHTML = data.testoDomanda;
 
-        let risposta1 = document.createElement("input");
-        risposta1.type = "radio";
-        risposta1.name = "risposta";
-        risposta1.value = data.risposta1;
-        form.appendChild(risposta1);
-        form.innerHTML += `${data.risposta1}<br>`;
+        let radioRisposte = document.getElementById('radioRisposte');
 
-        let risposta2 = document.createElement("input");
-        risposta2.type = "radio";
-        risposta2.name = "risposta";
-        risposta2.value = data.risposta2;
-        form.appendChild(risposta2);
-        form.innerHTML += `${data.risposta2}<br>`;
+        for(let i in data.risposte){
+            let risposta = document.createElement("input");
+            risposta.type = "radio";
+            risposta.name = "risposta";
+            risposta.value = data.risposte[i];
+            radioRisposte.appendChild(risposta);
+            radioRisposte.innerHTML += `${data.risposte[i]}<br>`;
+        }
 
-        document.getElementById("formDomanda").innerHTML += `<button type="submit" onclick="chiediRisposta('${numeroDomande}', '${data.id}')">Invia</button>`;
+        document.getElementById("formDomanda").innerHTML += `<button type="submit" onclick="chiediRisposta('${numeroDomande}', '${data.id}')" id="pulsanteInviaRisposta">Invia</button>`;
     }).catch(error => console.log("Si è verificato un errore!"))
 
 }

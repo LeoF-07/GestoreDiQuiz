@@ -1,20 +1,53 @@
+body{
+    background-color: aquamarine;
+}
+
 .form{
-    border: 2px solid black;
     width: 60%;
     margin: 0 auto;
     text-align: center;
     padding: 2%;
+    background-color: coral;
+}
+
+#formIniziale{
+    border: 2px solid black;
 }
 
 #testoEFormDomanda{
     border: 2px solid black;
+    padding: 5%;
     width: 60%;
     margin: 0 auto;
     text-align: center;
+    background-color: coral;
 }
 
 #titolo{
     border: 2px solid black;
     text-align: center;
     padding: 10px;
+    margin-bottom: 15%;
+}
+
+#testoDomanda{
+    margin-bottom: 3px;
+}
+
+#radioRisposte{
+    text-align: left;
+}
+
+#pulsanteInviaRisposta{
+    margin-top: 7px;
+}
+
+#fineQuiz{
+    border: 2px solid black;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15%;
+    padding: 2%;
+    background-color: coral;
 }
