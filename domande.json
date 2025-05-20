@@ -104,29 +104,57 @@
             "id": "P15",
             "testoDomanda": "Qual è il nome di questa statua?",
             "tipoMedia": "immagine",
-            "media": "Immagini/ImmaginiQuiz/David.jpg",
+            "media": "ImmaginiEVideo/Media/David.jpg",
             "risposte": ["Statua della Liberta", "David di Michelangelo", "Laocoonte", "La pietà di Michelangelo"]
         },
         {
             "id": "P16",
             "testoDomanda": "Di quale Stato è questa bandiera?",
             "tipoMedia": "immagine",
-            "media": "Immagini/ImmaginiQuiz/BandieraItalia.jpg",
+            "media": "ImmaginiEVideo/Media/BandieraItalia.jpg",
             "risposte": ["Francia", "Spagna", "Italia", "Belgio"]
         },
         {
             "id": "P17",
             "testoDomanda": "Come si chiama questo monumento?",
             "tipoMedia": "immagine",
-            "media": "Immagini/ImmaginiQuiz/Colosseo.jpg",
+            "media": "ImmaginiEVideo/Media/Colosseo.jpg",
             "risposte": ["Colosseo", "Fontana di Trevi", "Torre di Pisa", "Duomo di Milano"]
         },
         {
             "id": "P18",
             "testoDomanda": "Come si chiama questo animale?",
             "tipoMedia": "video",
-            "media": "Immagini/ImmaginiQuiz/VideoOrso.mp4",
+            "media": "ImmaginiEVideo/Media/VideoOrso.mp4",
             "risposte": ["Mucca", "Zebra", "Lucertola", "Orso"]
+        },
+        {
+            "id": "P19",
+            "testoDomanda": "Da che saga è tratta questa scena?",
+            "tipoMedia": "video",
+            "media": "ImmaginiEVideo/Media/VideoLOTR.mp4",
+            "risposte": ["Il Signore degli Anelli", "Harry Potter", "Star Wars", "Avatar"]
+        },
+        {
+            "id": "P20",
+            "testoDomanda": "Da che videogioco proviene questa immagine?",
+            "tipoMedia": "immagine",
+            "media": "ImmaginiEVideo/Media/Minecraft.jpg",
+            "risposte": ["Fortnite", "Minecraft", "God of War", "Rocket League"]
+        },
+        {
+            "id": "P21",
+            "testoDomanda": "Che cavo è rappresentato?",
+            "tipoMedia": "immagine",
+            "media": "ImmaginiEVideo/Media/USB.jpg",
+            "risposte": ["USB", "HDMI", "Ethernet", "AUX"]
+        },
+        {
+            "id": "P22",
+            "testoDomanda": "Che sport è questo?",
+            "tipoMedia": "video",
+            "media": "ImmaginiEVideo/Media/VideoBasket.mp4",
+            "risposte": ["Calcio", "Ciclismo", "Nuoto", "Basket"]
         }
     ],
 
@@ -206,6 +234,22 @@
         {
             "id": "P18",
             "rispostaCorretta": "Orso"
+        },
+        {
+            "id": "P19",
+            "rispostaCorretta": "Il Signore degli Anelli"
+        },
+        {
+            "id": "P20",
+            "rispostaCorretta": "Minecraft"
+        },
+        {
+            "id": "P21",
+            "rispostaCorretta": "USB"
+        },
+        {
+            "id": "P22",
+            "rispostaCorretta": "Basket"
         }
     ]
 }

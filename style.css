@@ -1,5 +1,6 @@
 body{
     background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form{
@@ -12,6 +13,7 @@ body{
 
 #formIniziale{
     border: 2px solid black;
+    box-shadow: 50px 50px 70px coral;
 }
 
 #formDomanda{
@@ -20,18 +22,20 @@ body{
 
 #testoEFormDomanda{
     border: 2px solid black;
-    padding: 5%;
+    padding: 2%;
     width: 60%;
     margin: 0 auto;
     text-align: center;
+
     background-color: coral;
+    box-shadow: 50px 50px 70px coral;
 }
 
 #titolo{
     border: 2px solid black;
     text-align: center;
     padding: 10px;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
     background-color: coral;
 }
 
@@ -55,14 +59,11 @@ body{
     margin-bottom: 15%;
     padding: 2%;
     background-color: coral;
-}
-
-.rispostaEsatta{
-    background-color: green;
+    box-shadow: 50px 50px 70px coral;
 }
 
 #contenitoreEsitoRisposta{
-    margin: 20px auto 200px;
+    margin: 100px auto 200px;
     width: 100px;
 }
 
@@ -73,4 +74,30 @@ body{
 .media{
     width: 300px;
     margin-bottom: 50px;
+}
+
+button {
+  padding: 7px 12px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 9px #999;
+
+  transition-duration: 0.4s;
+}
+
+button:hover {
+    color: white;
+    background-color: black
+}
+
+button:active {
+  background-color: black;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }

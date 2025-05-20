@@ -4,12 +4,15 @@ let numeroDomandeTotali;
 let domanda;
 let punteggio = 0;
 
-let formIniziale = `<form onsubmit="event.preventDefault()" id="formIniziale" class="form">
+let formIniziale;
+
+let formInizialeH = `<form onsubmit="event.preventDefault()" id="formIniziale" class="form">
                         <select name="numeroDomande" id="numeroDomande">
                             <option value="default">Seleziona il numero di domande</option>
                             <option value="5">5 domande</option>
                             <option value="10">10 domande</option>
                             <option value="15">15 domande</option>
+                            <option value="20">20 domande</option>
                         </select>
                         <br>
                         <br>
@@ -27,25 +30,22 @@ let formDomanda =  `<div id="testoEFormDomanda">
 let fineQuiz = `<div id="fineQuiz">
                     Hai completato il quiz!<br><br><br>
                     Hai ottenuto il seguente punteggio<br><br>
-                    <div id="punteggio">5/5</div>
+                    <div id="punteggio"></div>
                     <br>
-                    <div id="percentuale">100%</div>
+                    <div id="percentuale"></div>
+                    <br><br>
+                    <button onclick="onLoad_Setup()">Ritenta Quiz</button>
                 </div>`;
 
-let spuntaVerde = `<img src="Immagini/Spunte/SpuntaVerde.png" alt="" id="esitoRisposta"></img>`
-let croceRossa = `<img src="Immagini/Spunte/CroceRossa.png" alt="" id="esitoRisposta"></img>`
+let spuntaVerde = `<img src="ImmaginiEVideo/Spunte/SpuntaVerde.png" alt="Risposta esatta!" id="esitoRisposta"></img>`
+let croceRossa = `<img src="ImmaginiEVideo/Spunte/CroceRossa.png" alt="Risposta errata..." id="esitoRisposta"></img>`
 
 async function onLoad_Setup(){
-    document.getElementById("contenitoreForm").innerHTML = formIniziale;
+    document.getElementById("contenitorePunteggio").innerHTML = "";
+    document.getElementById("contenitoreForm").innerHTML = formInizialeH;
     formIniziale = document.getElementById("formIniziale");
 
-    let dati;
-
-    await fetch(url + "/init").then(
-        response => response.json()
-    ).then((data) => {
-        dati = data;
-    }).catch(error => console.log("Si è verificato un errore!"))
+    await fetch(url + "/init").catch(error => console.log("Si è verificato un errore!"))
 }
 
 function prelevaDatiForm(){
@@ -63,7 +63,7 @@ async function chiediDomanda(numeroDomande){
         document.getElementById("contenitoreDomanda").innerHTML = "";
         document.getElementById('contenitorePunteggio').innerHTML = fineQuiz;
         document.getElementById("punteggio").innerHTML = `${punteggio}/${numeroDomandeTotali}`;
-        document.getElementById("percentuale").innerHTML = `${(punteggio / numeroDomandeTotali) * 100}%`;
+        document.getElementById("percentuale").innerHTML = `${((punteggio / numeroDomandeTotali) * 100).toFixed(2)}%`;
         return;
     }
 
@@ -111,11 +111,8 @@ async function chiediRisposta(numeroDomande, id, i) {
     let radioRisposta = document.getElementsByName('risposta');
     let risposta;
 
-    let idRisposta = 0;
-
     for (i = 0; i < radioRisposta.length; i++) {
         if (radioRisposta[i].checked){
-            idRisposta = i;
             risposta = radioRisposta[i].value;
             break;
         }
@@ -128,25 +125,17 @@ async function chiediRisposta(numeroDomande, id, i) {
             document.getElementById('contenitoreEsitoRisposta').innerHTML = spuntaVerde;
             await new Promise(resolve => setTimeout(resolve, 1000));
             document.getElementById('contenitoreEsitoRisposta').innerHTML = "";
-            //alert("Risposta esatta!");
             punteggio++;
         }
         else {
             document.getElementById('contenitoreEsitoRisposta').innerHTML = croceRossa;
             await new Promise(resolve => setTimeout(resolve, 1000));
             document.getElementById('contenitoreEsitoRisposta').innerHTML = "";
-            //alert("Risposta sbagliata...");
         }
 
         chiediDomanda(numeroDomande);
     }).catch(error => console.log("Si è verificato un errore!"))
 }
-
-/*function poniDomanda(domanda){
-    let spazioDomanda = document.getElementById("domanda");
-    console.log("ciao");
-    spazioDomanda.innerHTML += `${domanda.numeroDomanda} ${domanda.testoDomanda}`;
-}*/
 
 async function inviaRisposta() {
     dati = {"studenti": studenti};
@@ -162,13 +151,4 @@ async function inviaRisposta() {
     ).then((data) => {
         console.log(data);
     }).catch(error => console.log("Si è verificato un errore!"))
-    
-
-    /*try {
-        const response = await fetch(url + "aggDati", options);
-        const result = await response.json();
-        console.log("Esito:", result.esito);
-    } catch (error) {
-        console.error("Error:", error);
-    }*/
 }
