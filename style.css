@@ -14,6 +14,10 @@ body{
     border: 2px solid black;
 }
 
+#formDomanda{
+    width: 30%;
+}
+
 #testoEFormDomanda{
     border: 2px solid black;
     padding: 5%;
@@ -28,6 +32,7 @@ body{
     text-align: center;
     padding: 10px;
     margin-bottom: 15%;
+    background-color: coral;
 }
 
 #testoDomanda{
@@ -50,4 +55,17 @@ body{
     margin-bottom: 15%;
     padding: 2%;
     background-color: coral;
+}
+
+.rispostaEsatta{
+    background-color: green;
+}
+
+#contenitoreEsitoRisposta{
+    margin: 20px auto 200px;
+    width: 100px;
+}
+
+#esitoRisposta{
+    width: 100px;
 }

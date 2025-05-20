@@ -8,6 +8,8 @@ let formIniziale = `<form onsubmit="event.preventDefault()" id="formIniziale" cl
                         <select name="numeroDomande" id="numeroDomande">
                             <option value="default">Seleziona il numero di domande</option>
                             <option value="5">5 domande</option>
+                            <option value="10">10 domande</option>
+                            <option value="15">15 domande</option>
                         </select>
                         <br>
                         <br>
@@ -27,7 +29,10 @@ let fineQuiz = `<div id="fineQuiz">
                     <div id="punteggio">5/5</div>
                     <br>
                     <div id="percentuale">100%</div>
-                </div>`
+                </div>`;
+
+let spuntaVerde = `<img src="Immagini/Spunte/SpuntaVerde.png" alt="" id="esitoRisposta"></img>`
+let croceRossa = `<img src="Immagini/Spunte/CroceRossa.png" alt="" id="esitoRisposta"></img>`
 
 async function onLoad_Setup(){
     document.getElementById("contenitoreForm").innerHTML = formIniziale;
@@ -75,6 +80,7 @@ async function chiediDomanda(numeroDomande){
 
         for(let i in data.risposte){
             let risposta = document.createElement("input");
+            risposta.id = i;
             risposta.type = "radio";
             risposta.name = "risposta";
             risposta.value = data.risposte[i];
@@ -87,11 +93,15 @@ async function chiediDomanda(numeroDomande){
 
 }
 
-async function chiediRisposta(numeroDomande, id) {
+async function chiediRisposta(numeroDomande, id, i) {
     let radioRisposta = document.getElementsByName('risposta');
     let risposta;
+
+    let idRisposta = 0;
+
     for (i = 0; i < radioRisposta.length; i++) {
         if (radioRisposta[i].checked){
+            idRisposta = i;
             risposta = radioRisposta[i].value;
             break;
         }
@@ -99,22 +109,30 @@ async function chiediRisposta(numeroDomande, id) {
 
     await fetch(url + "/chiediRisposta?" + new URLSearchParams({id: id, risposta: risposta}).toString()).then(
         response => response.json()
-    ).then((data) => {
+    ).then(async (data) => {
         if(data.esito == "corretto") {
-            alert("Risposta esatta!");
+            document.getElementById('contenitoreEsitoRisposta').innerHTML = spuntaVerde;
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            document.getElementById('contenitoreEsitoRisposta').innerHTML = "";
+            //alert("Risposta esatta!");
             punteggio++;
         }
-        else alert("Risposta sbagliata...");
+        else {
+            document.getElementById('contenitoreEsitoRisposta').innerHTML = croceRossa;
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            document.getElementById('contenitoreEsitoRisposta').innerHTML = "";
+            //alert("Risposta sbagliata...");
+        }
 
         chiediDomanda(numeroDomande);
     }).catch(error => console.log("Si è verificato un errore!"))
 }
 
-function poniDomanda(domanda){
+/*function poniDomanda(domanda){
     let spazioDomanda = document.getElementById("domanda");
     console.log("ciao");
     spazioDomanda.innerHTML += `${domanda.numeroDomanda} ${domanda.testoDomanda}`;
-}
+}*/
 
 async function inviaRisposta() {
     dati = {"studenti": studenti};

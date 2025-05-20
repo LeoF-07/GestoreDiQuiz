@@ -2,53 +2,141 @@
     "domande":[
         {
             "id": "P0",
-            "testoDomanda": "Come ti chiami?",
-            "risposta1": "Antonio",
-            "risposta2": "Leonardo",
-            "risposte": ["Leonardo", "Antonio"]
+            "testoDomanda": "Qual è il pianeta più grande del sistema solare?",
+            "risposte": ["Terra", "Marte", "Giove", "Venere"]
         },
         {
             "id": "P1",
-            "testoDomanda": "Quanti anni hai?",
-            "risposte": [16, 17]
+            "testoDomanda": "Chi ha scritto 'La Divina Commedia'?",
+            "risposte": ["Dante Alighieri", "Giovanni Boccaccio", "Alessandro Manzoni", "Gabriele D'Annunzio"]
         },
         {
             "id": "P2",
-            "testoDomanda": "Che animale hai?",
-            "risposte": ["Coniglio", "Cane"]
+            "testoDomanda": "Quale metallo è noto per essere un ottimo conduttore di elettricità?",
+            "risposte": ["Ferro", "Rame", "Oro", "Alluminio"]
         },
         {
             "id": "P3",
-            "testoDomanda": "Dove abiti?",
-            "risposte": ["Scorzè", "Noale"]
+            "testoDomanda": "Qual è la capitale del Giappone?",
+            "risposte": ["Tokyo", "Pechino", "Seul", "Bangkok"]
         },
         {
             "id": "P4",
-            "testoDomanda": "Che scuola fai?",
-            "risposte": ["Informatica", "Elettronica"]
+            "testoDomanda": "Chi ha dipinto la Gioconda?",
+            "risposte": ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Caravaggio"]
+        },
+        {
+            "id": "P5",
+            "testoDomanda": "Quale è l'elemento chimico con simbolo 'O'?",
+            "risposte": ["Oro", "Ossigeno", "Osmio", "Olmio"]
+        },
+        {
+            "id": "P6",
+            "testoDomanda": "In quale anno è caduto l'Impero Romano d'Occidente?",
+            "risposte": ["1453", "476", "1492", "1815"]
+        },
+        {
+            "id": "P7",
+            "testoDomanda": "Quale città ospita la famosa Torre Eiffel?",
+            "risposte": ["Parigi", "Londra", "Berlino", "Roma"]
+        },
+        {
+            "id": "P8",
+            "testoDomanda": "Chi ha scritto 'I promessi sposi'?",
+            "risposte": ["Giacomo Leopardi", "Giovanni Verga", "Alessandro Manzoni", "Italo Calvino"]
+        },
+        {
+            "id": "P9",
+            "testoDomanda": "Quale animale è noto per avere la capacità di cambiare colore?",
+            "risposte": ["Cobra", "Canguro", "Camaleonte", "Criceto"]
+        },
+        {
+            "id": "P10",
+            "testoDomanda": "Quale mare bagna le coste dell'Italia?",
+            "risposte": ["Mar Baltico", "Mar Nero", "Mar Mediterraneo", "Mar Rosso"]
+        },
+        {
+            "id": "P11",
+            "testoDomanda": "Chi ha scoperto la teoria della relatività?",
+            "risposte": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"]
+        },
+        {
+            "id": "P12",
+            "testoDomanda": "Quale paese ha dato origine alla pizza?",
+            "risposte": ["Italia", "Francia", "Grecia", "Spagna"]
+        },
+        {
+            "id": "P13",
+            "testoDomanda": "Quale strumento musicale ha 88 tasti?",
+            "risposte": ["Violino", "Chitarra", "Pianoforte", "Sassofono"]
+        },
+        {
+            "id": "P14",
+            "testoDomanda": "Quale lingua si parla in Brasile?",
+            "risposte": ["Spagnolo", "Portoghese", "Francese", "Inglese"]
         }
     ],
 
     "risposte":[
         {
             "id": "P0",
-            "rispostaCorretta":"Leonardo"
+            "rispostaCorretta": "Giove"
         },
         {
             "id": "P1",
-            "rispostaCorretta": 17
+            "rispostaCorretta": "Dante Alighieri"
         },
         {
             "id": "P2",
-            "rispostaCorretta": "Coniglio"
+            "rispostaCorretta": "Rame"
         },
         {
             "id": "P3",
-            "rispostaCorretta": "Scorzè"
+            "rispostaCorretta": "Tokyo"
         },
         {
             "id": "P4",
-            "rispostaCorretta": "Informatica"
+            "rispostaCorretta": "Leonardo da Vinci"
+        },
+        {
+            "id": "P5",
+            "rispostaCorretta": "Ossigeno"
+        },
+        {
+            "id": "P6",
+            "rispostaCorretta": "476"
+        },
+        {
+            "id": "P7",
+            "rispostaCorretta": "Parigi"
+        },
+        {
+            "id": "P8",
+            "rispostaCorretta": "Alessandro Manzoni"
+        },
+        {
+            "id": "P9",
+            "rispostaCorretta": "Camaleonte"
+        },
+        {
+            "id": "P10",
+            "rispostaCorretta": "Mar Mediterraneo"
+        },
+        {
+            "id": "P11",
+            "rispostaCorretta": "Albert Einstein"
+        },
+        {
+            "id": "P12",
+            "rispostaCorretta": "Italia"
+        },
+        {
+            "id": "P13",
+            "rispostaCorretta": "Pianoforte"
+        },
+        {
+            "id": "P14",
+            "rispostaCorretta": "Portoghese"
         }
     ]
 }
