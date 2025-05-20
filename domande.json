@@ -1,79 +1,132 @@
 {
+    "domande1":[
+        {
+            "id": "P18",
+            "testoDomanda": "Come si chiama questo animale?",
+            "tipoMedia": "video",
+            "media": "Immagini/ImmaginiQuiz/VideoOrso.mp4",
+            "risposte": ["Mucca", "Zebra", "Lucertola", "Orso"]
+        }
+    ],
+
     "domande":[
         {
             "id": "P0",
             "testoDomanda": "Qual è il pianeta più grande del sistema solare?",
+            "tipoMedia": "",
             "risposte": ["Terra", "Marte", "Giove", "Venere"]
         },
         {
             "id": "P1",
             "testoDomanda": "Chi ha scritto 'La Divina Commedia'?",
+            "tipoMedia": "",
             "risposte": ["Dante Alighieri", "Giovanni Boccaccio", "Alessandro Manzoni", "Gabriele D'Annunzio"]
         },
         {
             "id": "P2",
             "testoDomanda": "Quale metallo è noto per essere un ottimo conduttore di elettricità?",
+            "tipoMedia": "",
             "risposte": ["Ferro", "Rame", "Oro", "Alluminio"]
         },
         {
             "id": "P3",
             "testoDomanda": "Qual è la capitale del Giappone?",
+            "tipoMedia": "",
             "risposte": ["Tokyo", "Pechino", "Seul", "Bangkok"]
         },
         {
             "id": "P4",
             "testoDomanda": "Chi ha dipinto la Gioconda?",
+            "tipoMedia": "",
             "risposte": ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Caravaggio"]
         },
         {
             "id": "P5",
             "testoDomanda": "Quale è l'elemento chimico con simbolo 'O'?",
+            "tipoMedia": "",
             "risposte": ["Oro", "Ossigeno", "Osmio", "Olmio"]
         },
         {
             "id": "P6",
             "testoDomanda": "In quale anno è caduto l'Impero Romano d'Occidente?",
+            "tipoMedia": "",
             "risposte": ["1453", "476", "1492", "1815"]
         },
         {
             "id": "P7",
             "testoDomanda": "Quale città ospita la famosa Torre Eiffel?",
+            "tipoMedia": "",
             "risposte": ["Parigi", "Londra", "Berlino", "Roma"]
         },
         {
             "id": "P8",
             "testoDomanda": "Chi ha scritto 'I promessi sposi'?",
+            "tipoMedia": "",
             "risposte": ["Giacomo Leopardi", "Giovanni Verga", "Alessandro Manzoni", "Italo Calvino"]
         },
         {
             "id": "P9",
             "testoDomanda": "Quale animale è noto per avere la capacità di cambiare colore?",
+            "tipoMedia": "",
             "risposte": ["Cobra", "Canguro", "Camaleonte", "Criceto"]
         },
         {
             "id": "P10",
             "testoDomanda": "Quale mare bagna le coste dell'Italia?",
+            "tipoMedia": "",
             "risposte": ["Mar Baltico", "Mar Nero", "Mar Mediterraneo", "Mar Rosso"]
         },
         {
             "id": "P11",
             "testoDomanda": "Chi ha scoperto la teoria della relatività?",
+            "tipoMedia": "",
             "risposte": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"]
         },
         {
             "id": "P12",
             "testoDomanda": "Quale paese ha dato origine alla pizza?",
+            "tipoMedia": "",
             "risposte": ["Italia", "Francia", "Grecia", "Spagna"]
         },
         {
             "id": "P13",
             "testoDomanda": "Quale strumento musicale ha 88 tasti?",
+            "tipoMedia": "",
             "risposte": ["Violino", "Chitarra", "Pianoforte", "Sassofono"]
         },
         {
             "id": "P14",
             "testoDomanda": "Quale lingua si parla in Brasile?",
+            "tipoMedia": "",
             "risposte": ["Spagnolo", "Portoghese", "Francese", "Inglese"]
+        },
+        {
+            "id": "P15",
+            "testoDomanda": "Qual è il nome di questa statua?",
+            "tipoMedia": "immagine",
+            "media": "Immagini/ImmaginiQuiz/David.jpg",
+            "risposte": ["Statua della Liberta", "David di Michelangelo", "Laocoonte", "La pietà di Michelangelo"]
+        },
+        {
+            "id": "P16",
+            "testoDomanda": "Di quale Stato è questa bandiera?",
+            "tipoMedia": "immagine",
+            "media": "Immagini/ImmaginiQuiz/BandieraItalia.jpg",
+            "risposte": ["Francia", "Spagna", "Italia", "Belgio"]
+        },
+        {
+            "id": "P17",
+            "testoDomanda": "Come si chiama questo monumento?",
+            "tipoMedia": "immagine",
+            "media": "Immagini/ImmaginiQuiz/Colosseo.jpg",
+            "risposte": ["Colosseo", "Fontana di Trevi", "Torre di Pisa", "Duomo di Milano"]
+        },
+        {
+            "id": "P18",
+            "testoDomanda": "Come si chiama questo animale?",
+            "tipoMedia": "video",
+            "media": "Immagini/ImmaginiQuiz/VideoOrso.mp4",
+            "risposte": ["Mucca", "Zebra", "Lucertola", "Orso"]
         }
     ],
 
@@ -137,6 +190,22 @@
         {
             "id": "P14",
             "rispostaCorretta": "Portoghese"
+        },
+        {
+            "id": "P15",
+            "rispostaCorretta": "David di Michelangelo"
+        },
+        {
+            "id": "P16",
+            "rispostaCorretta": "Italia"
+        },
+        {
+            "id": "P17",
+            "rispostaCorretta": "Colosseo"
+        },
+        {
+            "id": "P18",
+            "rispostaCorretta": "Orso"
         }
     ]
 }

@@ -31,7 +31,7 @@ body{
     border: 2px solid black;
     text-align: center;
     padding: 10px;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     background-color: coral;
 }
 
@@ -44,7 +44,7 @@ body{
 }
 
 #pulsanteInviaRisposta{
-    margin-top: 7px;
+    margin-top: 20px;
 }
 
 #fineQuiz{
@@ -68,4 +68,9 @@ body{
 
 #esitoRisposta{
     width: 100px;
+}
+
+.media{
+    width: 300px;
+    margin-bottom: 50px;
 }

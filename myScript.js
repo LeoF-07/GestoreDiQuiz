@@ -17,6 +17,7 @@ let formIniziale = `<form onsubmit="event.preventDefault()" id="formIniziale" cl
                     </form>`;
 
 let formDomanda =  `<div id="testoEFormDomanda">
+                        <div id="contenitoreMedia"></div>
                         <div id="testoDomanda">Domanda</div>
                         <form onsubmit="event.preventDefault()" id="formDomanda" class="form">
                             <div id="radioRisposte"></div>
@@ -73,6 +74,19 @@ async function chiediDomanda(numeroDomande){
 
         document.getElementById("contenitoreForm").innerHTML = "";
         document.getElementById("contenitoreDomanda").innerHTML = formDomanda;
+
+        let contenitoreMedia = document.getElementById("contenitoreMedia");
+        if(data.tipoMedia == "immagine"){
+            let immagine = document.createElement('img');
+            immagine.src = data.media;
+            immagine.classList.add('media')
+            contenitoreMedia.appendChild(immagine);
+        }
+        if(data.tipoMedia == "video"){
+            contenitoreMedia.innerHTML +=  `<video width="320" height="240" class="media" controls>
+                                                <source src="${data.media}" type="video/mp4">
+                                            </video>`
+        }
 
         document.getElementById("testoDomanda").innerHTML = data.testoDomanda;
 
