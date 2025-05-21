@@ -1,22 +1,30 @@
 const url = "http://127.0.0.1:8000";
 
 let numeroDomandeTotali;
+let categoria;
 let domanda;
 let punteggio = 0;
 
 let formIniziale;
-
 let formInizialeH = `<form onsubmit="event.preventDefault()" id="formIniziale" class="form">
-                        <select name="numeroDomande" id="numeroDomande">
-                            <option value="default">Seleziona il numero di domande</option>
-                            <option value="5">5 domande</option>
-                            <option value="10">10 domande</option>
-                            <option value="15">15 domande</option>
-                            <option value="20">20 domande</option>
-                        </select>
+                        <div id="contenitoreSelects">
+                            <select name="categoriaDomande" id="categoriaDomande">
+                                <option value="default">Seleziona la categoria di domande</option>
+                                <option value="ALL">Qualsiasi</option>
+                                <option value="scienza">Scienza</option>
+                                <option value="geografia">Geografia</option>
+                                <option value="culturaGenerale">Cultura Generale</option>
+                                <option value="filmETecnologia">Film e Tecnologia</option>
+                            </select>
+                            <select name="numeroDomande" id="numeroDomande">
+                                <option value="default">Seleziona il numero di domande</option>
+                                <option value="5">5 domande</option>
+                                <option value="10">10 domande</option>
+                            </select>
+                        </div>
                         <br>
                         <br>
-                        <button type="submit" onclick="prelevaDatiForm()">Invia</button>
+                        <button type="submit" onclick="prelevaDatiForm()" id="pulsanteInviaForm">Invia</button>
                     </form>`;
 
 let formDomanda =  `<div id="testoEFormDomanda">
@@ -49,14 +57,19 @@ async function onLoad_Setup(){
 }
 
 function prelevaDatiForm(){
-    let indiceSelezionato = formIniziale.numeroDomande.selectedIndex;
-    numeroDomandeTotali = Number.parseInt(formIniziale.numeroDomande.options[indiceSelezionato].value);
-    let numeroDomande = Number.parseInt(formIniziale.numeroDomande.options[indiceSelezionato].value);
+    let indiceSelezionatoN = formIniziale.numeroDomande.selectedIndex;
+    numeroDomandeTotali = Number.parseInt(formIniziale.numeroDomande.options[indiceSelezionatoN].value);
+    let numeroDomande = Number.parseInt(formIniziale.numeroDomande.options[indiceSelezionatoN].value);
+
+    let indiceSelezionatoC = formIniziale.categoriaDomande.selectedIndex;
+    categoria = formIniziale.categoriaDomande.options[indiceSelezionatoC].value;
+
+    if(categoria == "default") alert("Seleziona la categoria di domande!");
     if(isNaN(numeroDomande)) alert("Seleziona il numero di domande!");
-    else chiediDomanda(numeroDomande);
+    if(categoria != "default" && !isNaN(numeroDomande)) chiediDomanda(categoria, numeroDomande);
 }
 
-async function chiediDomanda(numeroDomande){
+async function chiediDomanda(categoria, numeroDomande){
     console.log(numeroDomande);
     if(numeroDomande == 0) {
         alert("Quiz terminato!");
@@ -67,7 +80,7 @@ async function chiediDomanda(numeroDomande){
         return;
     }
 
-    await fetch(url + "/chiediDomanda?" + new URLSearchParams({categoria: "ALL"}).toString()).then(
+    await fetch(url + "/chiediDomanda?" + new URLSearchParams({categoria: categoria}).toString()).then(
         response => response.json()
     ).then((data) => {
         numeroDomande--;
@@ -133,7 +146,7 @@ async function chiediRisposta(numeroDomande, id, i) {
             document.getElementById('contenitoreEsitoRisposta').innerHTML = "";
         }
 
-        chiediDomanda(numeroDomande);
+        chiediDomanda(categoria, numeroDomande);
     }).catch(error => console.log("Si è verificato un errore!"))
 }
 

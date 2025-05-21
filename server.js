@@ -5,6 +5,10 @@ const { randomInt } = require('crypto');
 const PORT = 8000;
 
 let domande = [];
+let domandeDiCulturaGenerale = [];
+let domandeDiScienza = [];
+let domandeDiGeografia = [];
+let domandeDiFilmETecnologia = [];
 let risposte = [];
 
 const server = http.createServer((req, res) => {
@@ -28,8 +32,21 @@ const server = http.createServer((req, res) => {
                         'Access-Control-Allow-Headers': 'Content-Type'
                     });
 
+                    domande = [];
+                    domandeDiCulturaGenerale = [];
+                    domandeDiFilmETecnologia = [];
+                    domandeDiScienza = [];
+                    domandeDiGeografia = [];
+                    risposte = [];
+
                     domande = JSON.parse(data).domande;
                     risposte = JSON.parse(data).risposte;
+
+                    for(let i in domande) domande[i].risposte.sort(() => Math.random() - 0.5);
+                    for(let i in domande) if(domande[i].categoria == "culturaGenerale") domandeDiCulturaGenerale.push(domande[i]);
+                    for(let i in domande) if(domande[i].categoria == "scienza") domandeDiScienza.push(domande[i]);
+                    for(let i in domande) if(domande[i].categoria == "geografia") domandeDiGeografia.push(domande[i]);
+                    for(let i in domande) if(domande[i].categoria == "filmETecnologia") domandeDiFilmETecnologia.push(domande[i]);
 
                     res.write(JSON.stringify(JSON.parse(data)));
                     res.end();
@@ -51,7 +68,31 @@ const server = http.createServer((req, res) => {
                 res.write(JSON.stringify(domande[n]));
                 res.end();
                 domande.splice(n, 1);
-            } 
+            }
+            if(categoria == "culturaGenerale"){
+                const n = randomInt(domandeDiCulturaGenerale.length);
+                res.write(JSON.stringify(domandeDiCulturaGenerale[n]));
+                res.end();
+                domandeDiCulturaGenerale.splice(n, 1);
+            }
+            if(categoria == "scienza"){
+                const n = randomInt(domandeDiScienza.length);
+                res.write(JSON.stringify(domandeDiScienza[n]));
+                res.end();
+                domandeDiScienza.splice(n, 1);
+            }
+            if(categoria == "geografia"){
+                const n = randomInt(domandeDiGeografia.length);
+                res.write(JSON.stringify(domandeDiGeografia[n]));
+                res.end();
+                domandeDiGeografia.splice(n, 1);
+            }
+            if(categoria == "filmETecnologia"){
+                const n = randomInt(domandeDiFilmETecnologia.length);
+                res.write(JSON.stringify(domandeDiFilmETecnologia[n]));
+                res.end();
+                domandeDiFilmETecnologia.splice(n, 1);
+            }
         }
 
         if (parsedUrl.pathname === '/chiediRisposta') {

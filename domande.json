@@ -1,255 +1,455 @@
 {
-    "domande1":[
+    "domande": [
         {
-            "id": "P18",
-            "testoDomanda": "Come si chiama questo animale?",
-            "tipoMedia": "video",
-            "media": "Immagini/ImmaginiQuiz/VideoOrso.mp4",
-            "risposte": ["Mucca", "Zebra", "Lucertola", "Orso"]
-        }
-    ],
-
-    "domande":[
-        {
-            "id": "P0",
-            "testoDomanda": "Qual è il pianeta più grande del sistema solare?",
-            "tipoMedia": "",
-            "risposte": ["Terra", "Marte", "Giove", "Venere"]
-        },
-        {
-            "id": "P1",
+            "id": "C0",
+            "categoria": "culturaGenerale",
             "testoDomanda": "Chi ha scritto 'La Divina Commedia'?",
             "tipoMedia": "",
             "risposte": ["Dante Alighieri", "Giovanni Boccaccio", "Alessandro Manzoni", "Gabriele D'Annunzio"]
         },
         {
-            "id": "P2",
-            "testoDomanda": "Quale metallo è noto per essere un ottimo conduttore di elettricità?",
-            "tipoMedia": "",
-            "risposte": ["Ferro", "Rame", "Oro", "Alluminio"]
-        },
-        {
-            "id": "P3",
-            "testoDomanda": "Qual è la capitale del Giappone?",
-            "tipoMedia": "",
-            "risposte": ["Tokyo", "Pechino", "Seul", "Bangkok"]
-        },
-        {
-            "id": "P4",
+            "id": "C1",
+            "categoria": "culturaGenerale",
             "testoDomanda": "Chi ha dipinto la Gioconda?",
             "tipoMedia": "",
             "risposte": ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Caravaggio"]
         },
         {
-            "id": "P5",
-            "testoDomanda": "Quale è l'elemento chimico con simbolo 'O'?",
-            "tipoMedia": "",
-            "risposte": ["Oro", "Ossigeno", "Osmio", "Olmio"]
-        },
-        {
-            "id": "P6",
+            "id": "C2",
+            "categoria": "culturaGenerale",
             "testoDomanda": "In quale anno è caduto l'Impero Romano d'Occidente?",
             "tipoMedia": "",
             "risposte": ["1453", "476", "1492", "1815"]
         },
         {
-            "id": "P7",
-            "testoDomanda": "Quale città ospita la famosa Torre Eiffel?",
-            "tipoMedia": "",
-            "risposte": ["Parigi", "Londra", "Berlino", "Roma"]
-        },
-        {
-            "id": "P8",
+            "id": "C3",
+            "categoria": "culturaGenerale",
             "testoDomanda": "Chi ha scritto 'I promessi sposi'?",
             "tipoMedia": "",
             "risposte": ["Giacomo Leopardi", "Giovanni Verga", "Alessandro Manzoni", "Italo Calvino"]
         },
         {
-            "id": "P9",
-            "testoDomanda": "Quale animale è noto per avere la capacità di cambiare colore?",
-            "tipoMedia": "",
-            "risposte": ["Cobra", "Canguro", "Camaleonte", "Criceto"]
-        },
-        {
-            "id": "P10",
-            "testoDomanda": "Quale mare bagna le coste dell'Italia?",
-            "tipoMedia": "",
-            "risposte": ["Mar Baltico", "Mar Nero", "Mar Mediterraneo", "Mar Rosso"]
-        },
-        {
-            "id": "P11",
-            "testoDomanda": "Chi ha scoperto la teoria della relatività?",
-            "tipoMedia": "",
-            "risposte": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"]
-        },
-        {
-            "id": "P12",
+            "id": "C4",
+            "categoria": "culturaGenerale",
             "testoDomanda": "Quale paese ha dato origine alla pizza?",
             "tipoMedia": "",
             "risposte": ["Italia", "Francia", "Grecia", "Spagna"]
         },
         {
-            "id": "P13",
+            "id": "C5",
+            "categoria": "culturaGenerale",
             "testoDomanda": "Quale strumento musicale ha 88 tasti?",
             "tipoMedia": "",
             "risposte": ["Violino", "Chitarra", "Pianoforte", "Sassofono"]
         },
         {
-            "id": "P14",
-            "testoDomanda": "Quale lingua si parla in Brasile?",
-            "tipoMedia": "",
-            "risposte": ["Spagnolo", "Portoghese", "Francese", "Inglese"]
-        },
-        {
-            "id": "P15",
+            "id": "C6",
+            "categoria": "culturaGenerale",
             "testoDomanda": "Qual è il nome di questa statua?",
             "tipoMedia": "immagine",
             "media": "ImmaginiEVideo/Media/David.jpg",
             "risposte": ["Statua della Liberta", "David di Michelangelo", "Laocoonte", "La pietà di Michelangelo"]
         },
         {
-            "id": "P16",
-            "testoDomanda": "Di quale Stato è questa bandiera?",
-            "tipoMedia": "immagine",
-            "media": "ImmaginiEVideo/Media/BandieraItalia.jpg",
-            "risposte": ["Francia", "Spagna", "Italia", "Belgio"]
-        },
-        {
-            "id": "P17",
+            "id": "C7",
+            "categoria": "culturaGenerale",
             "testoDomanda": "Come si chiama questo monumento?",
             "tipoMedia": "immagine",
             "media": "ImmaginiEVideo/Media/Colosseo.jpg",
             "risposte": ["Colosseo", "Fontana di Trevi", "Torre di Pisa", "Duomo di Milano"]
         },
         {
-            "id": "P18",
+            "id": "C8",
+            "categoria": "culturaGenerale",
+            "testoDomanda": "Che sport è questo?",
+            "tipoMedia": "video",
+            "media": "ImmaginiEVideo/Media/VideoBasket.mp4",
+            "risposte": ["Calcio", "Ciclismo", "Nuoto", "Basket"]
+        },
+        {
+            "id": "C9",
+            "categoria": "culturaGenerale",
+            "testoDomanda": "Chi ha scritto 'Il Piccolo Principe'?",
+            "tipoMedia": "",
+            "risposte": ["Antoine de Saint-Exupéry", "Victor Hugo", "Charles Baudelaire", "Marcel Proust"]
+        },
+        {
+            "id": "S0",
+            "categoria": "scienza",
+            "testoDomanda": "Qual è il pianeta più grande del sistema solare?",
+            "tipoMedia": "",
+            "risposte": ["Terra", "Marte", "Giove", "Venere"]
+        },
+        {
+            "id": "S1",
+            "categoria": "scienza",
+            "testoDomanda": "Quale metallo è noto per essere un ottimo conduttore di elettricità?",
+            "tipoMedia": "",
+            "risposte": ["Ferro", "Rame", "Oro", "Alluminio"]
+        },
+        {
+            "id": "S2",
+            "categoria": "scienza",
+            "testoDomanda": "Quale è l'elemento chimico con simbolo 'O'?",
+            "tipoMedia": "",
+            "risposte": ["Oro", "Ossigeno", "Osmio", "Olmio"]
+        },
+        {
+            "id": "S3",
+            "categoria": "scienza",
+            "testoDomanda": "Quale animale è noto per avere la capacità di cambiare colore?",
+            "tipoMedia": "",
+            "risposte": ["Cobra", "Canguro", "Camaleonte", "Criceto"]
+        },
+        {
+            "id": "S4",
+            "categoria": "scienza",
+            "testoDomanda": "Chi ha scoperto la teoria della relatività?",
+            "tipoMedia": "",
+            "risposte": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"]
+        },
+        {
+            "id": "S5",
+            "categoria": "scienza",
             "testoDomanda": "Come si chiama questo animale?",
             "tipoMedia": "video",
             "media": "ImmaginiEVideo/Media/VideoOrso.mp4",
             "risposte": ["Mucca", "Zebra", "Lucertola", "Orso"]
         },
         {
-            "id": "P19",
+            "id": "S6",
+            "categoria": "scienza",
+            "testoDomanda": "Quale gas è essenziale per la respirazione umana?",
+            "tipoMedia": "",
+            "risposte": ["Azoto", "Ossigeno", "Anidride carbonica", "Argon"]
+        },
+        {
+            "id": "S7",
+            "categoria": "scienza",
+            "testoDomanda": "Qual è l'unità di misura della forza?",
+            "tipoMedia": "",
+            "risposte": ["Watt", "Newton", "Volt", "Pascal"]
+        },
+        {
+            "id": "S8",
+            "categoria": "scienza",
+            "testoDomanda": "Qual è il pianeta più vicino al Sole?",
+            "tipoMedia": "",
+            "risposte": ["Venere", "Marte", "Mercurio", "Giove"]
+        },
+        {
+            "id": "S9",
+            "categoria": "scienza",
+            "testoDomanda": "Qual è l'elemento chimico con simbolo 'Fe'?",
+            "tipoMedia": "",
+            "risposte": ["Fluoro", "Ferro", "Fosforo", "Francio"]
+        },
+        {
+            "id": "G0",
+            "categoria": "geografia",
+            "testoDomanda": "Qual è la capitale del Giappone?",
+            "tipoMedia": "",
+            "risposte": ["Tokyo", "Pechino", "Seul", "Bangkok"]
+        },
+        {
+            "id": "G1",
+            "categoria": "geografia",
+            "testoDomanda": "Quale città ospita la famosa Torre Eiffel?",
+            "tipoMedia": "",
+            "risposte": ["Parigi", "Londra", "Berlino", "Roma"]
+        },
+        {
+            "id": "G2",
+            "categoria": "geografia",
+            "testoDomanda": "Quale mare bagna le coste dell'Italia?",
+            "tipoMedia": "",
+            "risposte": ["Mar Baltico", "Mar Nero", "Mar Mediterraneo", "Mar Rosso"]
+        },
+        {
+            "id": "G3",
+            "categoria": "geografia",
+            "testoDomanda": "Quale lingua si parla in Brasile?",
+            "tipoMedia": "",
+            "risposte": ["Spagnolo", "Portoghese", "Francese", "Inglese"]
+        },
+        {
+            "id": "G4",
+            "categoria": "geografia",
+            "testoDomanda": "Di quale Stato è questa bandiera?",
+            "tipoMedia": "immagine",
+            "media": "ImmaginiEVideo/Media/BandieraItalia.jpg",
+            "risposte": ["Francia", "Spagna", "Italia", "Belgio"]
+        },
+        {
+            "id": "G5",
+            "categoria": "geografia",
+            "testoDomanda": "Qual è il fiume più lungo del mondo?",
+            "tipoMedia": "",
+            "risposte": ["Amazonas", "Nilo", "Mississippi", "Danubio"]
+        },
+        {
+            "id": "G6",
+            "categoria": "geografia",
+            "testoDomanda": "Quale montagna è la più alta del mondo?",
+            "tipoMedia": "",
+            "risposte": ["Mont Blanc", "Monte Everest", "Monte Kilimangiaro", "Monte Fuji"]
+        },
+        {
+            "id": "G7",
+            "categoria": "geografia",
+            "testoDomanda": "Quale deserto è il più grande del mondo?",
+            "tipoMedia": "",
+            "risposte": ["Sahara", "Gobi", "Kalahari", "Atacama"]
+        },
+        {
+            "id": "G8",
+            "categoria": "geografia",
+            "testoDomanda": "Quale continente ha il maggior numero di paesi?",
+            "tipoMedia": "",
+            "risposte": ["Africa", "Asia", "Europa", "America"]
+        },
+        {
+            "id": "G9",
+            "categoria": "geografia",
+            "testoDomanda": "Qual è l'oceano più grande della Terra?",
+            "tipoMedia": "",
+            "risposte": ["Oceano Atlantico", "Oceano Indiano", "Oceano Pacifico", "Oceano Artico"]
+        },
+        {
+            "id": "F0",
+            "categoria": "filmETecnologia",
             "testoDomanda": "Da che saga è tratta questa scena?",
             "tipoMedia": "video",
             "media": "ImmaginiEVideo/Media/VideoLOTR.mp4",
             "risposte": ["Il Signore degli Anelli", "Harry Potter", "Star Wars", "Avatar"]
         },
         {
-            "id": "P20",
+            "id": "F1",
+            "categoria": "filmETecnologia",
             "testoDomanda": "Da che videogioco proviene questa immagine?",
             "tipoMedia": "immagine",
             "media": "ImmaginiEVideo/Media/Minecraft.jpg",
             "risposte": ["Fortnite", "Minecraft", "God of War", "Rocket League"]
         },
         {
-            "id": "P21",
+            "id": "F2",
+            "categoria": "filmETecnologia",
             "testoDomanda": "Che cavo è rappresentato?",
             "tipoMedia": "immagine",
             "media": "ImmaginiEVideo/Media/USB.jpg",
             "risposte": ["USB", "HDMI", "Ethernet", "AUX"]
         },
         {
-            "id": "P22",
-            "testoDomanda": "Che sport è questo?",
-            "tipoMedia": "video",
-            "media": "ImmaginiEVideo/Media/VideoBasket.mp4",
-            "risposte": ["Calcio", "Ciclismo", "Nuoto", "Basket"]
+            "id": "F3",
+            "categoria": "filmETecnologia",
+            "testoDomanda": "Qual è il primo film della saga 'Harry Potter'?",
+            "tipoMedia": "",
+            "risposte": ["Harry Potter e il Prigioniero di Azkaban", "Harry Potter e la Pietra Filosofale", "Harry Potter e il Calice di Fuoco", "Harry Potter e la Camera dei Segreti"]
+        },
+        {
+            "id": "F4",
+            "categoria": "filmETecnologia",
+            "testoDomanda": "Quale film di Christopher Nolan tratta di sogni e livelli di realtà?",
+            "tipoMedia": "",
+            "risposte": ["Interstellar", "Inception", "Tenet", "Memento"]
+        },
+        {
+            "id": "F5",
+            "categoria": "filmETecnologia",
+            "testoDomanda": "Quale personaggio è il protagonista di 'The Legend of Zelda'?",
+            "tipoMedia": "",
+            "risposte": ["Zelda", "Link", "Ganondorf", "Epona"]
+        },
+        {
+            "id": "F6",
+            "categoria": "filmETecnologia",
+            "testoDomanda": "Quale società ha sviluppato il videogioco 'Minecraft'?",
+            "tipoMedia": "",
+            "risposte": ["Nintendo", "Ubisoft", "Mojang Studios", "Electronic Arts"]
+        },
+        {
+            "id": "F7",
+            "categoria": "filmETecnologia",
+            "testoDomanda": "Quale tecnologia è usata per creare immagini tridimensionali nei film?",
+            "tipoMedia": "",
+            "risposte": ["VR", "CGI", "OLED", "HDR"]
+        },
+        {
+            "id": "F8",
+            "categoria": "filmETecnologia",
+            "testoDomanda": "Quale dispositivo è spesso utilizzato per giocare ai videogiochi su PC?",
+            "tipoMedia": "",
+            "risposte": ["Joystick", "Mouse", "Controller", "Tastiera"]
+        },
+        {
+            "id": "F9",
+            "categoria": "filmETecnologia",
+            "testoDomanda": "Quale servizio di streaming è noto per produrre serie TV originali come 'Stranger Things'?",
+            "tipoMedia": "",
+            "risposte": ["Netflix", "Amazon Prime Video", "Disney+", "HBO Max"]
         }
     ],
 
-    "risposte":[
+    "risposte": [
         {
-            "id": "P0",
-            "rispostaCorretta": "Giove"
-        },
-        {
-            "id": "P1",
+            "id": "C0",
             "rispostaCorretta": "Dante Alighieri"
         },
         {
-            "id": "P2",
-            "rispostaCorretta": "Rame"
-        },
-        {
-            "id": "P3",
-            "rispostaCorretta": "Tokyo"
-        },
-        {
-            "id": "P4",
+            "id": "C1",
             "rispostaCorretta": "Leonardo da Vinci"
         },
         {
-            "id": "P5",
-            "rispostaCorretta": "Ossigeno"
-        },
-        {
-            "id": "P6",
+            "id": "C2",
             "rispostaCorretta": "476"
         },
         {
-            "id": "P7",
-            "rispostaCorretta": "Parigi"
-        },
-        {
-            "id": "P8",
+            "id": "C3",
             "rispostaCorretta": "Alessandro Manzoni"
         },
         {
-            "id": "P9",
-            "rispostaCorretta": "Camaleonte"
-        },
-        {
-            "id": "P10",
-            "rispostaCorretta": "Mar Mediterraneo"
-        },
-        {
-            "id": "P11",
-            "rispostaCorretta": "Albert Einstein"
-        },
-        {
-            "id": "P12",
+            "id": "C4",
             "rispostaCorretta": "Italia"
         },
         {
-            "id": "P13",
+            "id": "C5",
             "rispostaCorretta": "Pianoforte"
         },
         {
-            "id": "P14",
-            "rispostaCorretta": "Portoghese"
-        },
-        {
-            "id": "P15",
+            "id": "C6",
             "rispostaCorretta": "David di Michelangelo"
         },
         {
-            "id": "P16",
-            "rispostaCorretta": "Italia"
-        },
-        {
-            "id": "P17",
+            "id": "C7",
             "rispostaCorretta": "Colosseo"
         },
         {
-            "id": "P18",
+            "id": "C8",
+            "rispostaCorretta": "Basket"
+        },
+        {
+            "id": "C9",
+            "rispostaCorretta": "Antoine de Saint-Exupéry"
+        },
+        {
+            "id": "S0",
+            "rispostaCorretta": "Giove"
+        },
+        {
+            "id": "S1",
+            "rispostaCorretta": "Rame"
+        },
+        {
+            "id": "S2",
+            "rispostaCorretta": "Ossigeno"
+        },
+        {
+            "id": "S3",
+            "rispostaCorretta": "Camaleonte"
+        },
+        {
+            "id": "S4",
+            "rispostaCorretta": "Albert Einstein"
+        },
+        {
+            "id": "S5",
             "rispostaCorretta": "Orso"
         },
         {
-            "id": "P19",
+            "id": "S6",
+            "rispostaCorretta": "Ossigeno"
+        },
+        {
+            "id": "S7",
+            "rispostaCorretta": "Newton"
+        },
+        {
+            "id": "S8",
+            "rispostaCorretta": "Mercurio"
+        },
+        {
+            "id": "S9",
+            "rispostaCorretta": "Ferro"
+        },
+        {
+            "id": "G0",
+            "rispostaCorretta": "Tokyo"
+        },
+        {
+            "id": "G1",
+            "rispostaCorretta": "Parigi"
+        },
+        {
+            "id": "G2",
+            "rispostaCorretta": "Mar Mediterraneo"
+        },
+        {
+            "id": "G3",
+            "rispostaCorretta": "Portoghese"
+        },
+        {
+            "id": "G4",
+            "rispostaCorretta": "Italia"
+        },
+        {
+            "id": "G5",
+            "rispostaCorretta": "Nilo"
+        },
+        {
+            "id": "G6",
+            "rispostaCorretta": "Monte Everest"
+        },
+        {
+            "id": "G7",
+            "rispostaCorretta": "Sahara"
+        },
+        {
+            "id": "G8",
+            "rispostaCorretta": "Africa"
+        },
+        {
+            "id": "G9",
+            "rispostaCorretta": "Oceano Pacifico"
+        },
+        {
+            "id": "F0",
             "rispostaCorretta": "Il Signore degli Anelli"
         },
         {
-            "id": "P20",
+            "id": "F1",
             "rispostaCorretta": "Minecraft"
         },
         {
-            "id": "P21",
+            "id": "F2",
             "rispostaCorretta": "USB"
         },
         {
-            "id": "P22",
-            "rispostaCorretta": "Basket"
+            "id": "F3",
+            "rispostaCorretta": "Harry Potter e la Pietra Filosofale"
+        },
+        {
+            "id": "F4",
+            "rispostaCorretta": "Inception"
+        },
+        {
+            "id": "F5",
+            "rispostaCorretta": "Link"
+        },
+        {
+            "id": "F6",
+            "rispostaCorretta": "Mojang Studios"
+        },
+        {
+            "id": "F7",
+            "rispostaCorretta": "CGI"
+        },
+        {
+            "id": "F8",
+            "rispostaCorretta": "Mouse"
+        },
+        {
+            "id": "F9",
+            "rispostaCorretta": "Netflix"
         }
     ]
 }
